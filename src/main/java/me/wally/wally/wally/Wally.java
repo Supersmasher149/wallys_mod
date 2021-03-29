@@ -26,7 +26,7 @@ public class Wally {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Wally() {
-        register.registerBlock();
+        Registration.register();
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -79,7 +79,7 @@ public class Wally {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
+            // Registration a new block here
             LOGGER.info("HELLO from Register Block");
         }
     }
