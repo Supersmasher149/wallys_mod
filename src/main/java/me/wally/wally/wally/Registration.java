@@ -11,9 +11,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class Registration {
-    //blocks
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "wally");
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "wally");
+    //TODO add wraper thingy idk look it up
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "wally");
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "wally");
 
 
     public static void register() {
@@ -21,7 +21,7 @@ public class Registration {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
 
-        ModItemss.register();
         ModBlocks.register();
+        ModItemss.register();
     }
 }
